@@ -12,7 +12,7 @@ def encode_depth(depth):
     l8 = depth - (h8 << 8)
     h8 = np.expand_dims(h8, axis=2)  # shape: (h, w) -->(h, w, 1)
     l8 = np.expand_dims(l8, axis=2)
-    h8 = h8.astype(np.uint8)
+    h8 = h8.astype(np.uint8) 
     l8 = l8.astype(np.uint8)
     c = np.zeros(depth.shape+(1,), dtype=np.uint8)
     depth_hlc = np.concatenate((h8, l8, c), axis=2)  # (h, w, 3)
