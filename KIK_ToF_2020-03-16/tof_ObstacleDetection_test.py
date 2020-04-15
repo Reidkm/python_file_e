@@ -250,7 +250,7 @@ if __name__ == '__main__':
     # fpaths = 'C:/Users/LiJie/Documents/kik/kik_tof_UnloadingSpace/tof_20200302/tof_data/15cm/'
     # fpaths = 'C:/Users/LiJie/Documents/kik/kik_tof_UnloadingSpace/tof_20200302/tof_data/20cm/'
     #fpaths = 'C:/Users/LiJie/Documents/kik/kik_tof_UnloadingSpace/tof_20200302/tof_data/tmp/'
-    fpaths = 'tof_data/tof_data_20200316/sequence_2'
+    fpaths = '/home/reid/python_file_e/KIK_ToF_2020-03-16/tof_obstacle_test_images'
     
     # fpaths = 'C:/Users/LiJie/Documents/kik/kik_tof_UnloadingSpace/tof_20200302_v1/10cm/'  # no filter
     # fpaths = 'C:/Users/LiJie/Documents/kik/kik_tof_UnloadingSpace/tof_20200302_v2/10cm/'  # with filter

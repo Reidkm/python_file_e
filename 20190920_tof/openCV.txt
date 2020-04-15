@@ -1,0 +1,20 @@
+Openni::VideoFrameRef 转cv::mat说明
+ 
+深度数据
+Mat depthMat = Mat(frame->getHeight(), frame->getWidth(), CV_16UC1, (void*)frame->getData());
+ 
+ 
+IR数据
+Mat IRMat = Mat(frame->getHeight(), frame->getWidth(), CV_8UC1, (void*)frame->getData());
+ 
+Color数据
+Mat im_RGB;
+if(PIXEL_FORMAT_RGB888 == colorPixelFormat) //RGB888格式时
+{
+im_RGB = cv::Mat(Colorframe->getHeight(), Colorframe->getWidth(), CV_8UC3, (void*)Colorframe->getData());
+cvtColor(） //需要cvtColor反色
+}
+else if(PIXEL_FORMAT_JPEG == colorPixelFormat) //jpeg格式时
+{
+   im_RGB = cv::imdecode(cv::Mat(1, Colorframe->getDataSize(), CV_8UC1, (void*)Colorframe->getData()), CV_LOAD_IMAGE_COLOR);
+}
